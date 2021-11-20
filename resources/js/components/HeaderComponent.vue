@@ -4,7 +4,7 @@
       <nav class="navbar navbar-dark">
         <span class="navbar-brand mb-0 h1">TO DO APPだよ</span>
         <div>
-          <router-link v-bind:to="{name: task.list}">
+          <router-link v-bind:to="{name: 'task.list'}">
             <button class="btn btn-info">一覧</button>
           </router-link>
           <button class="btn btn-info">タスク追加</button>
