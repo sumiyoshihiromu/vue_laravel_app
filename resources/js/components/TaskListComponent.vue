@@ -19,7 +19,9 @@
           <td>Content1</td>
           <td>Hiromu</td>
           <td>
-            <button class="btn btn-info">詳細</button>
+            <router-link :to="{name: 'task.show', params: {taskId: 1}}">
+              <button class="btn btn-info">詳細</button>
+            </router-link>
           </td>
           <td>
             <button class="btn btn-info">編集</button>
@@ -34,7 +36,9 @@
           <td>Content2</td>
           <td>Hiroko</td>
           <td>
-            <button class="btn btn-info">詳細</button>
+            <router-link :to="{name: 'task.show', params: {taskId: 2}}">
+              <button class="btn btn-info">詳細</button>
+            </router-link>
           </td>
           <td>
             <button class="btn btn-info">編集</button>
@@ -49,7 +53,9 @@
           <td>Content3</td>
           <td>Hiroshi</td>
           <td>
-            <button class="btn btn-info">詳細</button>
+            <router-link :to="{name: 'task.show', params: {taskId: 3}}">
+              <button class="btn btn-info">詳細</button>
+            </router-link>
           </td>
           <td>
             <button class="btn btn-info">編集</button>
