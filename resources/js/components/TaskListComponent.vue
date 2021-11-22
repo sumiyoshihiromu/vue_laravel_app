@@ -24,7 +24,9 @@
             </router-link>
           </td>
           <td>
-            <button class="btn btn-info">編集</button>
+            <router-link :to="{name: 'task.edit', params: {taskId: 1}}">
+              <button class="btn btn-info">編集</button>
+            </router-link>
           </td>
           <td>
             <button class="btn btn-info">削除</button>
@@ -41,7 +43,10 @@
             </router-link>
           </td>
           <td>
-            <button class="btn btn-info">編集</button>
+            <router-link :to="{name: 'task.edit', params: {taskId: 2}}">
+              <button class="btn btn-info">編集</button>
+            </router-link>
+            
           </td>
           <td>
             <button class="btn btn-info">削除</button>
@@ -58,7 +63,9 @@
             </router-link>
           </td>
           <td>
-            <button class="btn btn-info">編集</button>
+            <router-link :to="{name: 'task.edit', params: {taskId: 3}}">
+              <button class="btn btn-info">編集</button>
+            </router-link>
           </td>
           <td>
             <button class="btn btn-info">削除</button>
