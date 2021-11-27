@@ -13,62 +13,23 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Title1</td>
-          <td>Content1</td>
-          <td>Hiromu</td>
+        <tr v-for="(task, index) in tasks" :key="index">
+          <th scope="row">{{ task.id }}</th>
+          <td>{{ task.title }}</td>
+          <td>{{ task.content }}</td>
+          <td>{{ task.person_in_charge }}</td>
           <td>
-            <router-link :to="{name: 'task.show', params: {taskId: 1}}">
+            <router-link :to="{name: 'task.show', params: {taskId: task.id}}">
               <button class="btn btn-info">詳細</button>
             </router-link>
           </td>
           <td>
-            <router-link :to="{name: 'task.edit', params: {taskId: 1}}">
+            <router-link :to="{name: 'task.edit', params: {taskId: task.id}}">
               <button class="btn btn-info">編集</button>
             </router-link>
           </td>
           <td>
-            <button class="btn btn-info">削除</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Title2</td>
-          <td>Content2</td>
-          <td>Hiroko</td>
-          <td>
-            <router-link :to="{name: 'task.show', params: {taskId: 2}}">
-              <button class="btn btn-info">詳細</button>
-            </router-link>
-          </td>
-          <td>
-            <router-link :to="{name: 'task.edit', params: {taskId: 2}}">
-              <button class="btn btn-info">編集</button>
-            </router-link>
-            
-          </td>
-          <td>
-            <button class="btn btn-info">削除</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Title3</td>
-          <td>Content3</td>
-          <td>Hiroshi</td>
-          <td>
-            <router-link :to="{name: 'task.show', params: {taskId: 3}}">
-              <button class="btn btn-info">詳細</button>
-            </router-link>
-          </td>
-          <td>
-            <router-link :to="{name: 'task.edit', params: {taskId: 3}}">
-              <button class="btn btn-info">編集</button>
-            </router-link>
-          </td>
-          <td>
-            <button class="btn btn-info">削除</button>
+            <button class="btn btn-danger">削除</button>
           </td>
         </tr>
       </tbody>
